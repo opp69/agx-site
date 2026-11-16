@@ -99,7 +99,9 @@
 
   /* Montre */
   .watch .wrap { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
-  .watch img { width: 220px; height: auto; border-radius: 48px; border: 6px solid #2a2940; box-shadow: 0 20px 50px rgba(0,0,0,.55); }
+  .widgets { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .widgets img { height: 150px; width: auto; border-radius: 22px; box-shadow: 0 12px 30px rgba(0,0,0,.45); }
+  .watch > .wrap > img { width: 220px; height: auto; border-radius: 48px; border: 6px solid #2a2940; box-shadow: 0 20px 50px rgba(0,0,0,.55); }
 
   /* Confidentialité et assistance */
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -121,7 +123,9 @@
     nav.links { display: none; }
     .shots { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 62%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
     .shots figure { scroll-snap-align: center; }
-    .watch img { justify-self: center; }
+    .watch > .wrap > img { justify-self: center; }
+    .widgets img { height: auto; max-width: 100%; }
+    .widgets img:last-child { width: 45%; }
   }
 </style>
 </head>
@@ -145,7 +149,7 @@
       <img class="icon" src="img/icon.png" alt="AGX">
       <h1>AGX</h1>
       <p class="subtitle">Thème astral et biorythmes</p>
-      <p class="promo">Votre thème astral complet, vos biorythmes du jour et un agenda des anniversaires, fêtes et jours fériés, sur iPhone, Apple Watch et en widget.</p>
+      <p class="promo">Votre thème astral complet, le ciel du moment, vos biorythmes du jour et un agenda des anniversaires, fêtes et jours fériés, sur iPhone, Apple Watch et en widget.</p>
       <a class="store" href="https://apps.apple.com/app/id6835093286">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
         <span>Télécharger dans l'App Store</span>
@@ -159,14 +163,14 @@
 <section id="ecrans">
   <div class="wrap">
     <h2>Une fiche pour chaque personne</h2>
-    <p class="lead">Pour chaque personne qui vous est chère : ses biorythmes du jour, son agenda, son thème astral et son interprétation.</p>
+    <p class="lead">Pour chaque personne qui vous est chère : ses biorythmes du jour, son agenda, son thème astral et son interprétation. Et pour tous : le ciel du moment, là où vous êtes.</p>
     <div class="shots">
       <figure><img class="phone" src="img/1-liste.jpg" alt="" loading="lazy"><figcaption>Tous ceux qui comptent, en un coup d'œil</figcaption></figure>
       <figure><img class="phone" src="img/3-theme.jpg" alt="" loading="lazy"><figcaption>Le thème astral complet</figcaption></figure>
       <figure><img class="phone" src="img/4-interpretation.jpg" alt="" loading="lazy"><figcaption>Une interprétation détaillée</figcaption></figure>
       <figure><img class="phone" src="img/5-evenements.jpg" alt="" loading="lazy"><figcaption>Anniversaires, fêtes et jours fériés</figcaption></figure>
       <figure><img class="phone" src="img/6-fete.jpg" alt="" loading="lazy"><figcaption>La fête de chaque prénom</figcaption></figure>
-      <figure><img class="phone" src="img/2-fiche.jpg" alt="" loading="lazy"><figcaption>Biorythmes et agenda du jour</figcaption></figure>
+      <figure><img class="phone" src="img/7-ciel.jpg" alt="" loading="lazy"><figcaption>Le ciel du moment, là où vous êtes</figcaption></figure>
     </div>
   </div>
 </section>
@@ -177,11 +181,13 @@
     <p class="lead">Une application complète, hors ligne, sans compte et sans publicité.</p>
     <div class="features">
       <div class="feature"><div class="emoji" aria-hidden="true">🪐</div><h3>Thème astral</h3><p>Roue zodiacale, positions des planètes et des maisons, aspects, ascendant, nœuds lunaires et Lune Noire.</p></div>
+      <div class="feature"><div class="emoji" aria-hidden="true">✨</div><h3>Ciel du moment</h3><p>La roue et la position des planètes maintenant, là où vous êtes, ou à la date et dans la ville de votre choix.</p></div>
       <div class="feature"><div class="emoji" aria-hidden="true">📖</div><h3>Interprétation</h3><p>Une lecture détaillée du thème, signe par signe et maison par maison, imprimable en PDF.</p></div>
       <div class="feature"><div class="emoji" aria-hidden="true">〰️</div><h3>Biorythmes</h3><p>Courbes physique, émotionnelle et intellectuelle, avec les jours critiques signalés.</p></div>
       <div class="feature"><div class="emoji" aria-hidden="true">🦊</div><h3>Animal fétiche</h3><p>Un animal totem choisi d'après votre thème, avec son explication.</p></div>
       <div class="feature"><div class="emoji" aria-hidden="true">🎂</div><h3>Agenda</h3><p>Anniversaires avec l'âge, fêtes de plus de 3 000 prénoms, jours fériés, fêtes chrétiennes, juives, musulmanes et chinoises calculées chaque année.</p></div>
       <div class="feature"><div class="emoji" aria-hidden="true">💾</div><h3>Sauvegarde</h3><p>Exportez et importez vos personnes et vos évènements, par AirDrop, Mail ou Fichiers.</p></div>
+      <div class="feature"><div class="emoji" aria-hidden="true">🌗</div><h3>Clair ou sombre</h3><p>Apparence automatique, claire ou sombre, pour l'application comme pour les widgets.</p></div>
     </div>
   </div>
 </section>
@@ -190,7 +196,11 @@
   <div class="wrap">
     <div>
       <h2>Sur l'Apple Watch et en widget</h2>
-      <p class="lead">Les biorythmes et l'agenda du jour au poignet, synchronisés avec votre iPhone, et un widget pour l'écran d'accueil.</p>
+      <p class="lead">Les biorythmes et l'agenda du jour au poignet, synchronisés avec votre iPhone. Sur l'écran d'accueil, le widget d'une personne et le ciel du moment en petit, moyen ou grand widget, en mode clair ou sombre.</p>
+      <div class="widgets">
+        <img src="img/widget-moyen.png" alt="Widget moyen « Ciel du moment » : roue et positions des planètes" loading="lazy">
+        <img src="img/widget-petit-clair.png" alt="Petit widget « Ciel du moment » en mode clair" loading="lazy">
+      </div>
     </div>
     <img src="img/watch.png" alt="AGX sur l'Apple Watch : biorythmes du jour" loading="lazy">
   </div>
@@ -204,7 +214,8 @@
       <ul>
         <li>Les personnes que vous ajoutez, leurs dates et lieux de naissance et votre agenda restent sur votre iPhone, et sur votre Apple Watch si vous l'utilisez.</li>
         <li>Pas de compte, pas de publicité, pas de suivi, pas de statistiques.</li>
-        <li>Rien n'est envoyé à un serveur : AGX fonctionne entièrement hors ligne. Seule la recherche d'une ville de naissance utilise le service de cartes d'Apple.</li>
+        <li>Rien n'est envoyé à un serveur : AGX fonctionne entièrement hors ligne. Seule la recherche d'une ville utilise le service de cartes d'Apple.</li>
+        <li>Pour le ciel du moment, votre position n'est demandée qu'avec votre accord et ne quitte jamais votre iPhone.</li>
         <li>Une sauvegarde n'est partagée que quand vous le décidez, avec l'application que vous choisissez.</li>
       </ul>
     </div>
